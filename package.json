@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "cron": "^2.4.4",
+    "discord.js": "^14.13.0",
     "tslib": "~2.6"
   }
 }
