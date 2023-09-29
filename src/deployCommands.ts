@@ -25,7 +25,7 @@ async function getCommands(): Promise<Collection<any, any>> {
 		for (const file of commandFiles) {
 			const filePath = path.join(commandsPath, file);
 			const { default: command } = await import(filePath);
-			console.log({ file, command });
+
 			if ('data' in command && 'execute' in command) {
 				commands.set(command.data.name, command);
 				commandsArr.push(command.data.toJSON());
