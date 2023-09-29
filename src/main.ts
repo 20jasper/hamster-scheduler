@@ -1,10 +1,12 @@
 // import job from './cron.js';
 import 'dotenv/config';
 import { Client, Events, GatewayIntentBits } from 'discord.js';
+import getCommands from './deployCommands.js';
 
 // job.start();
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+client.commands = await getCommands();
 
 // When the client is ready, run this code (only once)
 // We use 'c' for the event parameter to keep it separate from the already defined 'client'
