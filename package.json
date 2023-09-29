@@ -4,7 +4,7 @@
   "description": "Hamster Scheduler Discord Bot",
   "type": "module",
   "engines": {
-    "node": ">= 18.12 <20"
+    "node": ">= 18.15 <20"
   },
   "devDependencies": {
     "@types/jest": "~29.5",
@@ -23,6 +23,7 @@
   },
   "scripts": {
     "start": "node build/src/main.js",
+    "dev": "node --watch build/src/main.js",
     "clean": "rimraf coverage build tmp",
     "prebuild": "npm run lint",
     "build": "tsc -p tsconfig.json",
