@@ -24,6 +24,7 @@
   "scripts": {
     "start": "node build/src/main.js",
     "dev": "node --watch build/src/main.js",
+    "register": "node --watch build/src/deployCommands.js",
     "clean": "rimraf coverage build tmp",
     "prebuild": "npm run lint",
     "build": "tsc -p tsconfig.json",
@@ -36,6 +37,8 @@
   },
   "dependencies": {
     "cron": "^2.4.4",
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1",
     "tslib": "~2.6"
   }
 }
